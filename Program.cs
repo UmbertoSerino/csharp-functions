@@ -139,6 +139,30 @@ namespace csharp_functions
                 ExponentsNewArray(CreateArray());
                 SommaElementiArray(CreateArray());
             }
+
+            //Scrivere un piccolo programma che esegue le seguenti funzioni:
+            //(Si inserisca ogni funzionalità in uno o più metodi a seconda delle necessità)
+            //-Permette di Calcolare l'area di un cerchio  (I numeri sono in virgola quindi attenzione.)
+            double CalculateAreaOfTheCircle(double radius)
+            {
+                return Math.PI * radius * radius; 
+            }
+
+            double results = CalculateAreaOfTheCircle(2);
+            Console.WriteLine($"L'area del cerchio è di {results}");
+            //- Converta i gradi da Celsius a Farenheit
+            double ConvertCelsiusToFarenheit(double x)
+            {
+                double convert = (x * 9 / 5) + 32;
+                return convert;
+            }
+
+            double convert = ConvertCelsiusToFarenheit(5);
+            Console.WriteLine($"5 gradi celsius equivalgono a {convert} Farenheit");
+            //-Verificare se il numero fornito in input è un numero primo o no
+
+            //- Concatenare due stringhe date in ingresso(BONUS: Permettere all'utente anche di scegliere il carattere per la concatenazione)
+            //- Verificare se una parola data in input è palindroma(HELP: la funzione Equals delle stringhe ci può aiutare)
         }
     }
 }
