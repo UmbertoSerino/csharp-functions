@@ -43,6 +43,7 @@ namespace csharp_functions
                 {
                     squaredArray[i] = Exponents(array[i]);
                 }
+                StampaArray(squaredArray);
                 return squaredArray;
             }
             // Somma elementi in array
@@ -119,6 +120,25 @@ namespace csharp_functions
                questi vengono inseriti a mano dall’utente esternamente. Rieseguire il programma con l’input preso esternamente 
                dall’utente.
            */
+            {
+                // BONUS
+                int[] CreateArray()
+                {
+                    Console.WriteLine("Quanto deve essere grande l'array?");
+                    int choiceArray = Convert.ToInt32(Console.ReadLine());
+                    int[] numberArray = new int[choiceArray];
+                    Console.WriteLine("Numeri da inserire");
+                    for (int i = 0; i < numberArray.Length; i++)
+                    {
+                        numberArray[i] = Convert.ToInt32(Console.ReadLine());
+                    }
+                    return numberArray;
+                }
+
+                StampaArray(CreateArray());
+                ExponentsNewArray(CreateArray());
+                SommaElementiArray(CreateArray());
+            }
         }
     }
 }
