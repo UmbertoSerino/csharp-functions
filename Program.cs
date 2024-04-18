@@ -45,6 +45,16 @@ namespace csharp_functions
                 }
                 return squaredArray;
             }
+            // Somma elementi in array
+            int SommaElementiArray(int[] array)
+            {
+                int sum = 0;
+                foreach(int number in array)
+                {
+                    sum += number;
+                }
+                return sum;
+            }
             /* Esercizio di oggi: **csharp - functions * *
                nome repo: **csharp - functions * *
                In questo esercizio vi chiedo di definire qualche funzione di utilità che poi potete usare per poter 
@@ -56,7 +66,7 @@ namespace csharp_functions
                 “[elemento 1, elemento 2, elemento 3, ...]”. Potete prendere quella fatta in classe questa mattina
             */
             {
-                int[] numeri = { 1, 2, 3, 4 };
+                int[] numeri = { 2, 6, 7, 5, 3, 9 };
                 StampaArray(numeri);
             }
             /*
@@ -74,13 +84,13 @@ namespace csharp_functions
                 e non modificare l’array come parametro della funzione! Vi ricordate perchè? Pensateci(vedi slide)
             */
             {
-                int[] myArrayNumber = { 1, 2, 3, 4, 5 };
+                int[] myArrayNumber = { 2, 6, 7, 5, 3, 9 };
                 int[] squaredArray = ExponentsNewArray(myArrayNumber);
 
-                Console.WriteLine("Array originale:");
+                Console.Write("Array originale:");
                 StampaArray(myArrayNumber);
 
-                Console.WriteLine("Array con elementi elevati al quadrato:");
+                Console.Write("Array con elementi elevati al quadrato:");
                 StampaArray(squaredArray);
             }
             /*
@@ -88,7 +98,9 @@ namespace csharp_functions
                 gli elementi dell’array.
             */
             {
-
+                int[] myArray = { 2, 6, 7, 5, 3, 9 };
+                int sum = SommaElementiArray(myArray);
+                Console.WriteLine($"La somma del mio array è {sum}");
             }
             /*
 
